@@ -4,188 +4,91 @@
 
 # ⚡ Flux
 
-**🚀 為 V2Board 而生的開源跨平台代理客戶端**
+### 給機場站長的專屬客戶端方案
 
-*一行程式碼完成對接 · Flutter 五端統一 · 16 種語言支援*
+**基於 Flutter 的跨平台代理客戶端，專為 V2Board 機場營運商打造**
+
+改一行 API → 編譯 → 擁有專屬品牌 App
 
 [![Stars](https://img.shields.io/github/stars/flux-apphub/flux?style=flat-square&logo=github)](https://github.com/flux-apphub/flux/stargazers)
 [![Forks](https://img.shields.io/github/forks/flux-apphub/flux?style=flat-square&logo=github)](https://github.com/flux-apphub/flux/network/members)
 [![License](https://img.shields.io/github/license/flux-apphub/flux?style=flat-square)](LICENSE)
 [![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=flat-square&logo=flutter)](https://flutter.dev)
-[![Platform](https://img.shields.io/badge/-Android%20%7C%20iOS%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-333?style=flat-square)](#)
 
-💬 **加入社群**: [Telegram 群組](https://t.me/+62Otr015kSs1YmNk) · 📞 **商務合作**: [@fluxdeveloper](https://t.me/fluxdeveloper)
-
----
-
-**Flux** 是專為 [V2Board](https://github.com/v2board/v2board) 設計的現代化客戶端。  
-無論您是運營商還是開發者，只需修改 **一行 API 地址**，即可擁有專屬品牌 App。
+💬 [加入 Telegram 群組](https://t.me/+62Otr015kSs1YmNk) · 📞 [商務合作 @fluxdeveloper](https://t.me/fluxdeveloper)
 
 </div>
 
 ---
 
-## ✨ 核心亮點
+## 🎯 Flux 是什麼？
 
-| 亮點 | 描述 |
-|:---:|:---|
-| ⚡ **極速對接** | 只需修改一行 API 地址，無需任何後端開發經驗 |
-| 🎨 **精美 UI** | Material Design 3 風格，支援深色/淺色主題 |
-| 📱 **全平台覆蓋** | Flutter 構建，Android / iOS / Windows / macOS / Linux 一套程式碼 |
-| 🔐 **多協定支援** | Hysteria2 / VLESS Reality / VMess / Trojan / Shadowsocks / WireGuard / TUIC |
-| 🌍 **全球本地化** | 16 種語言，覆蓋中日韓英俄法德西葡越泰印土阿 |
-| 🔓 **完全開源** | MIT 協議，程式碼透明，自由客製 |
+> **Flux 不是給普通用戶用的 VPN 工具，而是給機場站長「造客戶端」的開源方案。**
 
----
+如果你正在運營 V2Board 面板，你一定遇過這些問題：
 
-## 🆚 為什麼選擇 Flux？
+- 😫 用戶抱怨第三方客戶端太醜、太複雜
+- 😫 想出一個自己品牌的 App，但不會開發
+- 😫 找外包太貴，找開源專案又不知道怎麼改
 
-| | Flux | 傳統客戶端 |
-|:---:|:---:|:---:|
-| **對接難度** | 🟢 改一行程式碼 | 🔴 需後端開發 |
-| **平台支援** | 🟢 5 端統一 | 🟡 通常 1-2 端 |
-| **UI 設計** | 🟢 現代 Material 3 | 🟡 功能優先 |
-| **協定覆蓋** | 🟢 7+ 主流協定 | 🟡 有限支援 |
-| **多語言** | 🟢 16 種語言 | 🟡 中英為主 |
-| **開源程度** | 🟢 100% 開源 | 🔴 閉源或部分開源 |
-| **品牌客製** | 🟢 輕鬆換名換圖示 | 🔴 需改原始碼 |
+**Flux 就是為了解決這些問題。**
 
 ---
 
-## 📱 介面預覽
+## 👥 Flux 適合誰用？
 
-### 📱 App 版本
-
-| | | |
-| :---: | :---: | :---: |
-| <img src="../assets/images/screenshots/1.png" width="200"> | <img src="../assets/images/screenshots/2.png" width="200"> | <img src="../assets/images/screenshots/3.png" width="200"> |
-| <img src="../assets/images/screenshots/4.png" width="200"> | <img src="../assets/images/screenshots/5.png" width="200"> | |
-
-### 💻 桌面版本
-
-| | |
-| :---: | :---: |
-| <img src="../assets/images/screenshots/6.png" width="400"> | <img src="../assets/images/screenshots/7.png" width="400"> |
-| <img src="../assets/images/screenshots/8.png" width="400"> | <img src="../assets/images/screenshots/9.png" width="400"> |
+| 用戶類型 | 你的需求 | Flux 能幫你 |
+|:---:|:---|:---|
+| 🛫 **機場站長** | 想快速出專屬品牌客戶端 | ✅ 改一行代碼，5 分鐘編譯 |
+| 🧑‍💻 **二次開發者** | 想 fork 一個乾淨的 Flutter 代理專案 | ✅ MIT 協議，可自由商用 |
+| 👤 **終端用戶** | 想要好看好用的代理工具 | ✅ 聯繫你的機場獲取專屬客戶端 |
 
 ---
 
-## 📞 客製化與商業支援
+## 🆚 為什麼選 Flux？
 
-如果您需要：
--   🔥 **修改 App 名稱和 Logo**
--   🎨 **客製專屬 UI 主題**
--   🚀 **增加進階功能**
-
-請透過 Telegram 聯繫：👉 **[@fluxdeveloper](https://t.me/fluxdeveloper)**
-
----
-
-## 🛠 支援協定
-
-✅ **已驗證平台 (Android & Windows)**:
-- **Hysteria2**: 極速抗封鎖協定
-- **VLESS** (Vision / Reality)
-- **VMess** (TCP / WebSocket)
-- **Trojan**
-- **Shadowsocks** (AEAD)
-- **WireGuard**
-- **TUIC**
+| 特性 | Flux | v2rayNG | Clash | Shadowrocket |
+|:---|:---:|:---:|:---:|:---:|
+| **跨平台** | ✅ 5 端 | ❌ 僅 Android | ⚠️ 多客戶端 | ❌ 僅 iOS |
+| **V2Board API** | ✅ 內建 | ❌ 手動匯入 | ❌ 手動匯入 | ❌ 手動匯入 |
+| **Flutter UI** | ✅ Material 3 | ❌ | ❌ | ❌ |
+| **白標定製** | ✅ 開箱即用 | ❌ | ❌ | ❌ |
+| **可商用** | ✅ MIT | ✅ | ⚠️ | ❌ |
 
 ---
 
-## 🚀 快速開始
-
-### 1. 下載程式碼
+## ⚡ 5 分鐘快速上手
 
 ```bash
 git clone https://github.com/flux-apphub/flux.git
 cd flux
-```
-
-### 2. 替換 API 網址 (核心步驟)
-
-開啟 `lib/services/api_config.dart`，修改：
-
-```dart
-Future<String> getBaseUrl() async {
-  // 改為您的面板網址
-  return 'https://您的面板網域.com/api/v1'; 
-}
-```
-
-### 3. 修改 App ID
-
-將 `com.example.yourapp` 替換為您自己的 App ID：
-
-| 平台 | 檔案路徑 | 修改項 |
-|------|---------|--------|
-| **Android** | `android/app/build.gradle.kts` | `applicationId` 和 `namespace` |
-| **iOS** | `ios/Runner.xcodeproj/project.pbxproj` | `PRODUCT_BUNDLE_IDENTIFIER` |
-| **macOS** | `macos/Runner/Configs/AppInfo.xcconfig` | `PRODUCT_BUNDLE_IDENTIFIER` |
-| **Linux** | `linux/CMakeLists.txt` | `APPLICATION_ID` |
-| **Windows** | `pubspec.yaml` | `msix_config` 下的 `identity_name` |
-
-### 4. 替換應用程式圖示
-
-1. 準備一張 **1024x1024** 的 PNG 圖片
-2. 放到 `assets/images/app_icon.png`
-3. 執行：
-   ```bash
-   flutter pub run flutter_launcher_icons
-   ```
-
-### 5. 開始打包
-
-```bash
-# Android
-flutter build apk --release
-
-# iOS
-flutter build ipa
-
-# Windows
-flutter build windows
-
-# macOS
-flutter build macos
-
-# Linux
-flutter build linux
+flutter pub get
+# 修改 lib/services/api_config.dart 中的 API 地址
+flutter run
 ```
 
 ---
 
-## ☕ 請我喝杯咖啡
+## 💰 商業合作
 
-如果這個專案對您有幫助，歡迎請作者喝杯咖啡，支持開源開發！
+| 服務 | 說明 |
+|:---|:---|
+| 🔥 **快速出包** | 幫你編譯 Android/iOS/Windows |
+| 🎨 **UI 定製** | 改配色、改佈局 |
+| 🔐 **授權系統** | 設備授權、到期提醒 |
 
-| USDT (TRC20) | USDC (Arbitrum) | ETH (Arbitrum) | USDT (ERC20) |
-| :---: | :---: | :---: | :---: |
-| <img src="../assets/images/donation/usdt_trc20.png" width="180" alt="USDT TRC20"> | <img src="../assets/images/donation/usdc_arbitrum.png" width="180" alt="USDC Arbitrum"> | <img src="../assets/images/donation/eth_arbitrum.png" width="180" alt="ETH Arbitrum"> | <img src="../assets/images/donation/usdt_erc20.png" width="180" alt="USDT ERC20"> |
-
----
-
-## 🔗 相關專案
-
-### 核心代理引擎
--   [Xray-core](https://github.com/XTLS/Xray-core): 本專案使用的核心代理引擎
--   [V2Ray-core](https://github.com/v2fly/v2ray-core): 經典的代理核心
--   [Hysteria](https://github.com/apernet/hysteria): 強大的抗封鎖代理協定
-
-### 面板 & 管理
--   [V2Board](https://github.com/v2board/v2board): 強大的 V2Ray 面板
+**聯繫：** [@fluxdeveloper](https://t.me/fluxdeveloper)
 
 ---
 
-## 💬 加入社群
+## 📄 License
 
-- **Telegram 群組**: [https://t.me/+62Otr015kSs1YmNk](https://t.me/+62Otr015kSs1YmNk)
+MIT License - 可自由使用、修改、分發和商用。
 
 ---
 
 <div align="center">
 
-**Flux Open Source** - Make Connection Simple.
+**Flux** - 給機場站長的專屬客戶端方案
 
 </div>

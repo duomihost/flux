@@ -4,188 +4,82 @@
 
 # ⚡ Flux
 
-**🚀 V2Board 向けに設計されたオープンソースのクロスプラットフォームプロキシクライアント**
+### VPN/プロキシサービス事業者向けホワイトラベルクライアント
 
-*1行で設定完了 · Flutter で5プラットフォーム対応 · 16言語サポート*
+**Flutter ベースのクロスプラットフォームプロキシクライアント、V2Board 運営者向け**
+
+API URL を1行変更 → ビルド → 独自ブランドアプリ完成
 
 [![Stars](https://img.shields.io/github/stars/flux-apphub/flux?style=flat-square&logo=github)](https://github.com/flux-apphub/flux/stargazers)
 [![Forks](https://img.shields.io/github/forks/flux-apphub/flux?style=flat-square&logo=github)](https://github.com/flux-apphub/flux/network/members)
 [![License](https://img.shields.io/github/license/flux-apphub/flux?style=flat-square)](LICENSE)
 [![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=flat-square&logo=flutter)](https://flutter.dev)
-[![Platform](https://img.shields.io/badge/-Android%20%7C%20iOS%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-333?style=flat-square)](#)
 
-💬 **コミュニティに参加**: [Telegram グループ](https://t.me/+62Otr015kSs1YmNk) · 📞 **ビジネス**: [@fluxdeveloper](https://t.me/fluxdeveloper)
-
----
-
-**Flux** は [V2Board](https://github.com/v2board/v2board) 向けに設計された最新のクライアントです。  
-**1行の API アドレス変更**だけで、あなただけのブランドアプリを手に入れましょう。
+💬 [Telegram グループ](https://t.me/+62Otr015kSs1YmNk) · 📞 [ビジネス @fluxdeveloper](https://t.me/fluxdeveloper)
 
 </div>
 
 ---
 
-## ✨ 主な特徴
+## 🎯 Flux とは？
 
-| 特徴 | 説明 |
-|:---:|:---|
-| ⚡ **即時セットアップ** | API URL を1行変更するだけ、バックエンド開発不要 |
-| 🎨 **美しい UI** | Material Design 3、ダーク/ライトテーマ対応 |
-| 📱 **クロスプラットフォーム** | Flutter で Android / iOS / Windows / macOS / Linux に対応 |
-| 🔐 **マルチプロトコル** | Hysteria2 / VLESS Reality / VMess / Trojan / Shadowsocks / WireGuard / TUIC |
-| 🌍 **グローバル対応** | 16言語対応 |
-| 🔓 **完全オープンソース** | MIT ライセンス、透明で自由にカスタマイズ可能 |
+> **Flux は一般ユーザー向けの VPN アプリではありません。サービス事業者が独自クライアントを構築するためのオープンソースソリューションです。**
 
 ---
 
-## 🆚 なぜ Flux を選ぶべきか？
+## 👥 誰のための Flux？
 
-| | Flux | 他のクライアント |
-|:---:|:---:|:---:|
-| **セットアップ難易度** | 🟢 1行変更 | 🔴 バックエンド必要 |
-| **プラットフォーム** | 🟢 5プラットフォーム統一 | 🟡 通常1-2 |
-| **UI デザイン** | 🟢 モダン Material 3 | 🟡 機能優先 |
-| **プロトコル対応** | 🟢 7+ 対応 | 🟡 限定的 |
-| **多言語** | 🟢 16言語 | 🟡 英中のみ |
-| **オープンソース** | 🟢 100% オープン | 🔴 クローズド/部分的 |
-| **ブランディング** | 🟢 簡単リブランド | 🔴 ソース変更必要 |
+| ユーザータイプ | ニーズ | Flux でできること |
+|:---:|:---|:---|
+| 🛫 **サービス事業者** | ブランド付きクライアントが欲しい | ✅ 1行変更、5分でビルド |
+| 🧑‍💻 **開発者** | フォークしたい Flutter プロジェクト | ✅ MIT ライセンス、商用利用可 |
+| 👤 **エンドユーザー** | 美しいプロキシクライアント | ✅ VPN プロバイダーに専用アプリをお問い合わせ |
 
 ---
 
-## 📱 スクリーンショット
+## 🆚 なぜ Flux？
 
-### 📱 モバイル
-
-| | | |
-| :---: | :---: | :---: |
-| <img src="../assets/images/screenshots/1.png" width="200"> | <img src="../assets/images/screenshots/2.png" width="200"> | <img src="../assets/images/screenshots/3.png" width="200"> |
-| <img src="../assets/images/screenshots/4.png" width="200"> | <img src="../assets/images/screenshots/5.png" width="200"> | |
-
-### 💻 デスクトップ
-
-| | |
-| :---: | :---: |
-| <img src="../assets/images/screenshots/6.png" width="400"> | <img src="../assets/images/screenshots/7.png" width="400"> |
-| <img src="../assets/images/screenshots/8.png" width="400"> | <img src="../assets/images/screenshots/9.png" width="400"> |
+| 機能 | Flux | v2rayNG | Clash | Shadowrocket |
+|:---|:---:|:---:|:---:|:---:|
+| **クロスプラットフォーム** | ✅ 5端末 | ❌ Android のみ | ⚠️ | ❌ iOS のみ |
+| **V2Board API** | ✅ 内蔵 | ❌ 手動 | ❌ 手動 | ❌ 手動 |
+| **ホワイトラベル** | ✅ すぐ使える | ❌ | ❌ | ❌ |
+| **商用利用** | ✅ MIT | ✅ | ⚠️ | ❌ |
 
 ---
 
-## 📞 カスタマイズ & 商用サポート
-
-以下のサービスが必要な場合：
--   🔥 **アプリ名とロゴの変更**
--   🎨 **カスタム UI テーマ**
--   🚀 **高度な機能の追加**
-
-Telegram でお問い合わせ：👉 **[@fluxdeveloper](https://t.me/fluxdeveloper)**
-
----
-
-## 🛠 サポートされているプロトコル
-
-✅ **検証済みプラットフォーム (Android & Windows)**:
-- **Hysteria2**: 高速な検閲回避プロトコル
-- **VLESS** (Vision / Reality)
-- **VMess** (TCP / WebSocket)
-- **Trojan**
-- **Shadowsocks** (AEAD)
-- **WireGuard**
-- **TUIC**
-
----
-
-## 🚀 クイックスタート
-
-### 1. リポジトリのクローン
+## ⚡ 5分で始める
 
 ```bash
 git clone https://github.com/flux-apphub/flux.git
 cd flux
-```
-
-### 2. API URL の設定 (重要)
-
-`lib/services/api_config.dart` を開いて変更：
-
-```dart
-Future<String> getBaseUrl() async {
-  // パネルの URL に変更
-  return 'https://your-panel-domain.com/api/v1'; 
-}
-```
-
-### 3. アプリ ID の変更
-
-`com.example.yourapp` を自分の App ID に置き換え：
-
-| プラットフォーム | ファイルパス | 変更項目 |
-|-----------------|-------------|----------|
-| **Android** | `android/app/build.gradle.kts` | `applicationId` と `namespace` |
-| **iOS** | `ios/Runner.xcodeproj/project.pbxproj` | `PRODUCT_BUNDLE_IDENTIFIER` |
-| **macOS** | `macos/Runner/Configs/AppInfo.xcconfig` | `PRODUCT_BUNDLE_IDENTIFIER` |
-| **Linux** | `linux/CMakeLists.txt` | `APPLICATION_ID` |
-| **Windows** | `pubspec.yaml` | `msix_config` の `identity_name` |
-
-### 4. アプリアイコンの置き換え
-
-1. **1024x1024** の PNG 画像を準備
-2. `assets/images/app_icon.png` に配置
-3. 実行：
-   ```bash
-   flutter pub run flutter_launcher_icons
-   ```
-
-### 5. ビルド
-
-```bash
-# Android
-flutter build apk --release
-
-# iOS
-flutter build ipa
-
-# Windows
-flutter build windows
-
-# macOS
-flutter build macos
-
-# Linux
-flutter build linux
+flutter pub get
+# lib/services/api_config.dart の API URL を変更
+flutter run
 ```
 
 ---
 
-## ☕ プロジェクトを支援
+## 💰 商用サービス
 
-このプロジェクトが役立った場合は、著者にコーヒーを一杯奢ってください！
+| サービス | 説明 |
+|:---|:---|
+| 🔥 **ビルド代行** | Android/iOS/Windows パッケージ |
+| 🎨 **UI カスタマイズ** | 配色、レイアウト変更 |
+| 🔐 **ライセンスシステム** | デバイス認証、有効期限 |
 
-| USDT (TRC20) | USDC (Arbitrum) | ETH (Arbitrum) | USDT (ERC20) |
-| :---: | :---: | :---: | :---: |
-| <img src="../assets/images/donation/usdt_trc20.png" width="180" alt="USDT TRC20"> | <img src="../assets/images/donation/usdc_arbitrum.png" width="180" alt="USDC Arbitrum"> | <img src="../assets/images/donation/eth_arbitrum.png" width="180" alt="ETH Arbitrum"> | <img src="../assets/images/donation/usdt_erc20.png" width="180" alt="USDT ERC20"> |
-
----
-
-## 🔗 関連プロジェクト
-
-### コアプロキシエンジン
--   [Xray-core](https://github.com/XTLS/Xray-core): このプロジェクトで使用されているコアエンジン
--   [V2Ray-core](https://github.com/v2fly/v2ray-core): クラシックなプロキシコア
--   [Hysteria](https://github.com/apernet/hysteria): 強力な検閲回避プロトコル
-
-### パネル & 管理
--   [V2Board](https://github.com/v2board/v2board): 強力な V2Ray パネル
+**連絡先：** [@fluxdeveloper](https://t.me/fluxdeveloper)
 
 ---
 
-## 💬 コミュニティに参加
+## 📄 License
 
-- **Telegram グループ**: [https://t.me/+62Otr015kSs1YmNk](https://t.me/+62Otr015kSs1YmNk)
+MIT License - 自由に使用、変更、配布、商用利用が可能です。
 
 ---
 
 <div align="center">
 
-**Flux Open Source** - Make Connection Simple.
+**Flux** - VPN 事業者向けホワイトラベルクライアント
 
 </div>
