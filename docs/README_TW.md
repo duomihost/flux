@@ -1,21 +1,52 @@
 [English](../README_EN.md) | [简体中文](../README.md) | 繁體中文 | [日本語](README_JA.md) | [한국어](README_KO.md) | [Русский](README_RU.md) | [हिन्दी](README_HI.md) | [Español](README_ES.md) | [Português](README_PT.md) | [Français](README_FR.md) | [Deutsch](README_DE.md) | [العربية](README_AR.md) | [Türkçe](README_TR.md) | [Tiếng Việt](README_VI.md) | [ไทย](README_TH.md) | [Indonesia](README_ID.md)
 
-# Flux - 開源 V2Board 客戶端
+<div align="center">
 
-**Flux** 是一個完美適配 [V2Board](https://github.com/wyx2685/v2board) 的跨平台客戶端。
+# ⚡ Flux
 
-我們致力於提供最簡單、最流暢的對接體驗。如果您正在運營 V2Board 面板，Flux 是您客戶端的最佳選擇。
+**🚀 為 V2Board 而生的開源跨平台代理客戶端**
+
+*一行程式碼完成對接 · Flutter 五端統一 · 16 種語言支援*
+
+[![Stars](https://img.shields.io/github/stars/flux-apphub/flux?style=flat-square&logo=github)](https://github.com/flux-apphub/flux/stargazers)
+[![Forks](https://img.shields.io/github/forks/flux-apphub/flux?style=flat-square&logo=github)](https://github.com/flux-apphub/flux/network/members)
+[![License](https://img.shields.io/github/license/flux-apphub/flux?style=flat-square)](LICENSE)
+[![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=flat-square&logo=flutter)](https://flutter.dev)
+[![Platform](https://img.shields.io/badge/-Android%20%7C%20iOS%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-333?style=flat-square)](#)
 
 ---
 
-## 📞 客製化與商業支援
+**Flux** 是專為 [V2Board](https://github.com/v2board/v2board) 設計的現代化客戶端。  
+無論您是運營商還是開發者，只需修改 **一行 API 地址**，即可擁有專屬品牌 App。
 
-如果您需要：
--   🔥 **修改 App 名稱和 Logo**
--   🎨 **客製專屬 UI 主題**
--   🚀 **增加進階功能**
+</div>
 
-請透過 Telegram 聯繫我：👉 **[@xiaoxiaonihaoya](https://t.me/xiaoxiaonihaoya)**
+---
+
+## ✨ 核心亮點
+
+| 亮點 | 描述 |
+|:---:|:---|
+| ⚡ **極速對接** | 只需修改一行 API 地址，無需任何後端開發經驗 |
+| 🎨 **精美 UI** | Material Design 3 風格，支援深色/淺色主題 |
+| 📱 **全平台覆蓋** | Flutter 構建，Android / iOS / Windows / macOS / Linux 一套程式碼 |
+| 🔐 **多協定支援** | Hysteria2 / VLESS Reality / VMess / Trojan / Shadowsocks / WireGuard / TUIC |
+| 🌍 **全球本地化** | 16 種語言，覆蓋中日韓英俄法德西葡越泰印土阿 |
+| 🔓 **完全開源** | MIT 協議，程式碼透明，自由客製 |
+
+---
+
+## 🆚 為什麼選擇 Flux？
+
+| | Flux | 傳統客戶端 |
+|:---:|:---:|:---:|
+| **對接難度** | 🟢 改一行程式碼 | 🔴 需後端開發 |
+| **平台支援** | 🟢 5 端統一 | 🟡 通常 1-2 端 |
+| **UI 設計** | 🟢 現代 Material 3 | 🟡 功能優先 |
+| **協定覆蓋** | 🟢 7+ 主流協定 | 🟡 有限支援 |
+| **多語言** | 🟢 16 種語言 | 🟡 中英為主 |
+| **開源程度** | 🟢 100% 開源 | 🔴 閉源或部分開源 |
+| **品牌客製** | 🟢 輕鬆換名換圖示 | 🔴 需改原始碼 |
 
 ---
 
@@ -32,24 +63,25 @@
 
 | | |
 | :---: | :---: |
-| <img src="../assets/images/screenshots/6.png" width="200"> | <img src="../assets/images/screenshots/7.png" width="200"> |
-| <img src="../assets/images/screenshots/8.png" width="200"> | <img src="../assets/images/screenshots/9.png" width="200"> |
+| <img src="../assets/images/screenshots/6.png" width="400"> | <img src="../assets/images/screenshots/7.png" width="400"> |
+| <img src="../assets/images/screenshots/8.png" width="400"> | <img src="../assets/images/screenshots/9.png" width="400"> |
 
 ---
 
-## 🎉 核心優勢
+## 📞 客製化與商業支援
 
--   **極簡對接**: 真的只需要**一步**！修改 API 網址即可直接使用，告別繁瑣設定。
--   **多種協定**: 支援 VLESS, VMess, Trojan, Shadowsocks, WireGuard, TUIC, Hysteria2。
--   **全平台支援**: Android, iOS, Windows, macOS, Linux 全覆蓋。
--   **開源透明**: 程式碼完全開源，安全可控，隨時客製。
--   **多語言支持**: 支持英語、簡體中文、繁體中文、日語、韓語、俄語、西班牙語等多種語言。
+如果您需要：
+-   🔥 **修改 App 名稱和 Logo**
+-   🎨 **客製專屬 UI 主題**
+-   🚀 **增加進階功能**
+
+請透過 Telegram 聯繫：👉 **[@fluxdeveloper](https://t.me/fluxdeveloper)**
 
 ---
 
-## 🛠 支援協定 / Supported Protocols
+## 🛠 支援協定
 
-✅ **已驗證平台 (Verified on Android & Windows)**:
+✅ **已驗證平台 (Android & Windows)**:
 - **Hysteria2**: 極速抗封鎖協定
 - **VLESS** (Vision / Reality)
 - **VMess** (TCP / WebSocket)
@@ -57,83 +89,6 @@
 - **Shadowsocks** (AEAD)
 - **WireGuard**
 - **TUIC**
-
----
-
-## 🌐 OSS 遠端配置 (網域名稱下發)
-
-Flux 支援透過 OSS/CDN 下發遠端配置，實現 **網域名稱自動切換**、**版本更新通知**、**公告推播** 等功能。
-
-### 配置方法
-
-1. 將以下 JSON 設定檔上傳到您的 OSS/CDN（如阿里雲 OSS、Cloudflare R2、GitHub Raw 等）
-2. 在 `lib/services/remote_config_service.dart` 中設定 `_ossUrls` 清單
-
-### JSON 配置格式
-
-```json
-{
-  "config_version": 1,
-  "domains": [
-    "https://api1.example.com/api/v1",
-    "https://api2.example.com/api/v1",
-    "https://backup.example.com/api/v1"
-  ],
-  "backup_subscription": "https://backup-sub.example.com/sub",
-  
-  "announcement": {
-    "enabled": true,
-    "title": "系統公告",
-    "content": "春節期間正常服務，祝大家新年快樂！",
-    "type": "info"
-  },
-  
-  "maintenance": {
-    "enabled": false,
-    "message": "系統維護中，預計2小時後恢復"
-  },
-  
-  "update": {
-    "min_version": "1.0.0",
-    "latest": {
-      "android": { "version": "1.2.0", "url": "https://example.com/flux-1.2.0.apk", "force": false },
-      "ios": { "version": "1.2.0", "url": "https://apps.apple.com/app/id123456", "force": false },
-      "windows": { "version": "1.2.0", "url": "https://example.com/flux-1.2.0-win.zip", "force": false },
-      "macos": { "version": "1.2.0", "url": "https://example.com/flux-1.2.0-mac.dmg", "force": false },
-      "linux": { "version": "1.2.0", "url": "https://example.com/flux-1.2.0-linux.tar.gz", "force": false }
-    },
-    "changelog": "1. 新增 WireGuard 和 TUIC 協定支援\n2. 修復若干 bug"
-  },
-  
-  "contact": {
-    "telegram": "https://t.me/your_group",
-    "website": "https://yoursite.com"
-  },
-  
-  "features": {
-    "invite_enabled": true,
-    "purchase_enabled": true,
-    "ssr_enabled": false
-  },
-  
-  "recommended_nodes": ["香港01", "日本02"]
-}
-```
-
-### 欄位說明
-
-| 欄位 | 說明 |
-|------|------|
-| `config_version` | 配置版本號，用於判斷是否需要更新快取 |
-| `domains` | API 網域名稱清單，按優先順序排序，自動測試可用性 |
-| `backup_subscription` | 備用訂閱地址 |
-| `announcement` | 公告配置，`type` 可選 `info`/`warning`/`error` |
-| `maintenance` | 維護模式，啟用時阻止用戶操作 |
-| `update` | 版本更新資訊，`force: true` 表示強制更新 |
-| `min_version` | 最低支援版本，低於此版本強制更新 |
-| `contact` | 客服聯繫方式 |
-| `features` | 功能開關 |
-| `recommended_nodes` | 推薦節點名稱清單 |
 
 ---
 
@@ -172,7 +127,7 @@ Future<String> getBaseUrl() async {
 ### 4. 替換應用程式圖示
 
 1. 準備一張 **1024x1024** 的 PNG 圖片
-2. 放到 `../assets/images/app_icon.png`
+2. 放到 `assets/images/app_icon.png`
 3. 執行：
    ```bash
    flutter pub run flutter_launcher_icons
@@ -217,7 +172,7 @@ flutter build linux
 -   [Hysteria](https://github.com/apernet/hysteria): 強大的抗封鎖代理協定
 
 ### 面板 & 管理
--   [V2Board](https://github.com/wyx2685/v2board): 強大的 V2Ray 面板
+-   [V2Board](https://github.com/v2board/v2board): 強大的 V2Ray 面板
 
 ---
 
@@ -227,4 +182,8 @@ flutter build linux
 
 ---
 
+<div align="center">
+
 **Flux Open Source** - Make Connection Simple.
+
+</div>

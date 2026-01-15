@@ -1,22 +1,52 @@
 [English](README_EN.md) | 简体中文 | [繁體中文](docs/README_TW.md) | [日本語](docs/README_JA.md) | [한국어](docs/README_KO.md) | [Русский](docs/README_RU.md) | [हिन्दी](docs/README_HI.md) | [Español](docs/README_ES.md) | [Português](docs/README_PT.md) | [Français](docs/README_FR.md) | [Deutsch](docs/README_DE.md) | [العربية](docs/README_AR.md) | [Türkçe](docs/README_TR.md) | [Tiếng Việt](docs/README_VI.md) | [ไทย](docs/README_TH.md) | [Indonesia](docs/README_ID.md)
 
-# Flux - Open Source V2Board Client
+<div align="center">
 
-**Flux** 是一个完美适配 [V2Board](https://github.com/wyx2685/v2board) 的跨平台客户端。
+# ⚡ Flux
 
-我们致力于提供最简单、最流畅的对接体验。如果您正在运营 V2Board 面板，Flux 是您客户端的最佳选择。
+**🚀 为 V2Board 而生的开源跨平台代理客户端**
+
+*一行代码完成对接 · Flutter 五端统一 · 16 种语言支持*
+
+[![Stars](https://img.shields.io/github/stars/flux-apphub/flux?style=flat-square&logo=github)](https://github.com/flux-apphub/flux/stargazers)
+[![Forks](https://img.shields.io/github/forks/flux-apphub/flux?style=flat-square&logo=github)](https://github.com/flux-apphub/flux/network/members)
+[![License](https://img.shields.io/github/license/flux-apphub/flux?style=flat-square)](LICENSE)
+[![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=flat-square&logo=flutter)](https://flutter.dev)
+[![Platform](https://img.shields.io/badge/-Android%20%7C%20iOS%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-333?style=flat-square)](#)
 
 ---
 
-## 📞 定制与商业支持
+**Flux** 是专为 [V2Board](https://github.com/v2board/v2board) 设计的现代化客户端。  
+无论您是运营商还是开发者，只需修改 **一行 API 地址**，即可拥有专属品牌 App。
 
-如果您需要：
--   🔥 **修改 App 名称和 Logo**
--   🎨 **定制专属 UI 主题**
--   🚀 **增加高级功能**
+</div>
 
+---
 
-请通过 Telegram 联系我：👉 **[@xiaoxiaonihaoya](https://t.me/xiaoxiaonihaoya)**
+## ✨ 核心亮点
+
+| 亮点 | 描述 |
+|:---:|:---|
+| ⚡ **极速对接** | 只需修改一行 API 地址，无需任何后端开发经验 |
+| 🎨 **精美 UI** | Material Design 3 风格，支持深色/浅色主题 |
+| � **全平台覆盖** | Flutter 构建，Android / iOS / Windows / macOS / Linux 一套代码 |
+| � **多协议支持** | Hysteria2 / VLESS Reality / VMess / Trojan / Shadowsocks / WireGuard / TUIC |
+| 🌍 **全球本地化** | 16 种语言，覆盖中日韩英俄法德西葡越泰印土阿 |
+| 🔓 **完全开源** | MIT 协议，代码透明，自由定制 |
+
+---
+
+## 🆚 为什么选择 Flux？
+
+| | Flux | 传统客户端 |
+|:---:|:---:|:---:|
+| **对接难度** | 🟢 改一行代码 | 🔴 需后端开发 |
+| **平台支持** | 🟢 5 端统一 | 🟡 通常 1-2 端 |
+| **UI 设计** | 🟢 现代 Material 3 | 🟡 功能优先 |
+| **协议覆盖** | 🟢 7+ 主流协议 | 🟡 有限支持 |
+| **多语言** | 🟢 16 种语言 | 🟡 中英为主 |
+| **开源程度** | 🟢 100% 开源 | 🔴 闭源或部分开源 |
+| **品牌定制** | 🟢 轻松换名换图标 | 🔴 需改源码 |
 
 ---
 
@@ -33,18 +63,19 @@
 
 | | |
 | :---: | :---: |
-| <img src="assets/images/screenshots/6.png" width="200"> | <img src="assets/images/screenshots/7.png" width="200"> |
-| <img src="assets/images/screenshots/8.png" width="200"> | <img src="assets/images/screenshots/9.png" width="200"> |
+| <img src="assets/images/screenshots/6.png" width="400"> | <img src="assets/images/screenshots/7.png" width="400"> |
+| <img src="assets/images/screenshots/8.png" width="400"> | <img src="assets/images/screenshots/9.png" width="400"> |
 
 ---
 
-## 🎉 核心优势
+## 📞 定制与商业支持
 
--   **极简对接**: 真的只需要**一步**！修改 API 地址即可直接使用，告别繁琐配置。
--   **多种协议**: 支持 VLESS, VMess, Trojan, Shadowsocks。
--   **全平台支持**: Android, iOS, Windows, macOS, Linux 全覆盖。
--   **开源透明**: 代码完全开源，安全可控，随时定制。
--   **多语言支持**: 支持英语、简体中文、繁体中文、日语、韩语、俄语、西班牙语等多种语言。
+如果您需要：
+-   🔥 **修改 App 名称和 Logo**
+-   🎨 **定制专属 UI 主题**
+-   🚀 **增加高级功能**
+
+请通过 Telegram 联系：👉 **[@fluxdeveloper](https://t.me/fluxdeveloper)**
 
 ---
 
@@ -91,7 +122,6 @@ Flux 在不同平台上采用了最原生的系统级方案来接管网络流量
 
 ⚠️ **注意 / Note**: 
 开发者暂无 Apple 设备，**iOS 和 macOS 版本尚未经过完整测试**。欢迎社区贡献测试反馈！
-(Developer has no Apple devices to test iOS/macOS builds. Contributions welcome!)
 
 ---
 
@@ -178,7 +208,7 @@ Flux 支持通过 OSS/CDN 下发远程配置，实现 **域名自动切换**、*
 
 ---
 
-### 🚀 快速开始 / Quick Start
+## 🚀 快速开始 / Quick Start
 
 ### 1. 下载代码
 
@@ -359,7 +389,7 @@ static const List<String> _ossUrls = [
 -   [Hysteria](https://github.com/apernet/hysteria): 强大的抗封锁代理协议。
 
 ### 面板 & 管理
--   [V2Board](https://github.com/wyx2685/v2board): 强大的 V2Ray 面板。
+-   [V2Board](https://github.com/v2board/v2board): 强大的 V2Ray 面板。
 
 ### 工具 & 库
 -   [hev-socks5-tunnel](https://github.com/heiher/hev-socks5-tunnel): 高性能 SOCKS5 隧道。
@@ -373,4 +403,16 @@ static const List<String> _ossUrls = [
 
 ---
 
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
 **Flux Open Source** - Make Connection Simple.
+
+*Keywords: V2Board client, Flutter VPN app, V2Ray Xray client, cross-platform proxy, Hysteria2 VLESS VMess Shadowsocks Trojan*
+
+</div>

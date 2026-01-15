@@ -1,21 +1,52 @@
 [English](../README_EN.md) | [简体中文](../README.md) | [繁體中文](README_TW.md) | 日本語 | [한국어](README_KO.md) | [Русский](README_RU.md) | [हिन्दी](README_HI.md) | [Español](README_ES.md) | [Português](README_PT.md) | [Français](README_FR.md) | [Deutsch](README_DE.md) | [العربية](README_AR.md) | [Türkçe](README_TR.md) | [Tiếng Việt](README_VI.md) | [ไทย](README_TH.md) | [Indonesia](README_ID.md)
 
-# Flux - オープンソース V2Board クライアント
+<div align="center">
 
-**Flux** は [V2Board](https://github.com/wyx2685/v2board) に完璧に対応したクロスプラットフォームクライアントです。
+# ⚡ Flux
 
-最もシンプルでスムーズな統合体験を提供することに取り組んでいます。V2Board パネルを運営している場合、Flux は最適な選択です。
+**🚀 V2Board 向けに設計されたオープンソースのクロスプラットフォームプロキシクライアント**
+
+*1行で設定完了 · Flutter で5プラットフォーム対応 · 16言語サポート*
+
+[![Stars](https://img.shields.io/github/stars/flux-apphub/flux?style=flat-square&logo=github)](https://github.com/flux-apphub/flux/stargazers)
+[![Forks](https://img.shields.io/github/forks/flux-apphub/flux?style=flat-square&logo=github)](https://github.com/flux-apphub/flux/network/members)
+[![License](https://img.shields.io/github/license/flux-apphub/flux?style=flat-square)](LICENSE)
+[![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=flat-square&logo=flutter)](https://flutter.dev)
+[![Platform](https://img.shields.io/badge/-Android%20%7C%20iOS%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-333?style=flat-square)](#)
 
 ---
 
-## 📞 カスタマイズ & 商用サポート
+**Flux** は [V2Board](https://github.com/v2board/v2board) 向けに設計された最新のクライアントです。  
+**1行の API アドレス変更**だけで、あなただけのブランドアプリを手に入れましょう。
 
-以下のサービスが必要な場合：
--   🔥 **アプリ名とロゴの変更**
--   🎨 **カスタム UI テーマ**
--   🚀 **高度な機能の追加**
+</div>
 
-Telegram でお問い合わせください：👉 **[@xiaoxiaonihaoya](https://t.me/xiaoxiaonihaoya)**
+---
+
+## ✨ 主な特徴
+
+| 特徴 | 説明 |
+|:---:|:---|
+| ⚡ **即時セットアップ** | API URL を1行変更するだけ、バックエンド開発不要 |
+| 🎨 **美しい UI** | Material Design 3、ダーク/ライトテーマ対応 |
+| 📱 **クロスプラットフォーム** | Flutter で Android / iOS / Windows / macOS / Linux に対応 |
+| 🔐 **マルチプロトコル** | Hysteria2 / VLESS Reality / VMess / Trojan / Shadowsocks / WireGuard / TUIC |
+| 🌍 **グローバル対応** | 16言語対応 |
+| 🔓 **完全オープンソース** | MIT ライセンス、透明で自由にカスタマイズ可能 |
+
+---
+
+## 🆚 なぜ Flux を選ぶべきか？
+
+| | Flux | 他のクライアント |
+|:---:|:---:|:---:|
+| **セットアップ難易度** | 🟢 1行変更 | 🔴 バックエンド必要 |
+| **プラットフォーム** | 🟢 5プラットフォーム統一 | 🟡 通常1-2 |
+| **UI デザイン** | 🟢 モダン Material 3 | 🟡 機能優先 |
+| **プロトコル対応** | 🟢 7+ 対応 | 🟡 限定的 |
+| **多言語** | 🟢 16言語 | 🟡 英中のみ |
+| **オープンソース** | 🟢 100% オープン | 🔴 クローズド/部分的 |
+| **ブランディング** | 🟢 簡単リブランド | 🔴 ソース変更必要 |
 
 ---
 
@@ -32,18 +63,19 @@ Telegram でお問い合わせください：👉 **[@xiaoxiaonihaoya](https://t
 
 | | |
 | :---: | :---: |
-| <img src="../assets/images/screenshots/6.png" width="200"> | <img src="../assets/images/screenshots/7.png" width="200"> |
-| <img src="../assets/images/screenshots/8.png" width="200"> | <img src="../assets/images/screenshots/9.png" width="200"> |
+| <img src="../assets/images/screenshots/6.png" width="400"> | <img src="../assets/images/screenshots/7.png" width="400"> |
+| <img src="../assets/images/screenshots/8.png" width="400"> | <img src="../assets/images/screenshots/9.png" width="400"> |
 
 ---
 
-## 🎉 主な特徴
+## 📞 カスタマイズ & 商用サポート
 
--   **シンプルな統合**: たった**一歩**で完了！API URL を変更するだけで使用開始。
--   **複数のプロトコル**: VLESS, VMess, Trojan, Shadowsocks, WireGuard, TUIC, Hysteria2 をサポート。
--   **クロスプラットフォーム**: Android, iOS, Windows, macOS, Linux に対応。
--   **オープンソース**: 完全にオープンソースで、安全かつカスタマイズ可能。
--   **多言語サポート**: 英語、中国語、日本語、韓国語、ロシア語、スペイン語などをサポート。
+以下のサービスが必要な場合：
+-   🔥 **アプリ名とロゴの変更**
+-   🎨 **カスタム UI テーマ**
+-   🚀 **高度な機能の追加**
+
+Telegram でお問い合わせ：👉 **[@fluxdeveloper](https://t.me/fluxdeveloper)**
 
 ---
 
@@ -57,82 +89,6 @@ Telegram でお問い合わせください：👉 **[@xiaoxiaonihaoya](https://t
 - **Shadowsocks** (AEAD)
 - **WireGuard**
 - **TUIC**
-
----
-
-## 🌐 OSS リモート設定
-
-Flux は OSS/CDN 経由のリモート設定をサポートしており、**ドメインの自動フェイルオーバー**、**バージョン更新**、**お知らせ** などを実現します。
-
-### 設定方法
-
-1. JSON 設定ファイルを OSS/CDN (Alibaba Cloud OSS, Cloudflare R2, GitHub Raw など) にアップロードします。
-2. `lib/services/remote_config_service.dart` の `_ossUrls` を設定します。
-
-### JSON 設定フォーマット
-
-```json
-{
-  "config_version": 1,
-  "domains": [
-    "https://api1.example.com/api/v1",
-    "https://api2.example.com/api/v1"
-  ],
-  "backup_subscription": "https://backup-sub.example.com/sub",
-  
-  "announcement": {
-    "enabled": true,
-    "title": "システム通知",
-    "content": "サービスは正常に稼働しています。",
-    "type": "info"
-  },
-  
-  "maintenance": {
-    "enabled": false,
-    "message": "システムメンテナンス中"
-  },
-  
-  "update": {
-    "min_version": "1.0.0",
-    "latest": {
-      "android": { "version": "1.2.0", "url": "https://example.com/flux-1.2.0.apk", "force": false },
-      "ios": { "version": "1.2.0", "url": "https://apps.apple.com/app/id123456", "force": false },
-      "windows": { "version": "1.2.0", "url": "https://example.com/flux-1.2.0-win.zip", "force": false },
-      "macos": { "version": "1.2.0", "url": "https://example.com/flux-1.2.0-mac.dmg", "force": false },
-      "linux": { "version": "1.2.0", "url": "https://example.com/flux-1.2.0-linux.tar.gz", "force": false }
-    },
-    "changelog": "1. WireGuard と TUIC のサポートを追加\n2. バグ修正"
-  },
-  
-  "contact": {
-    "telegram": "https://t.me/your_group",
-    "website": "https://yoursite.com"
-  },
-  
-  "features": {
-    "invite_enabled": true,
-    "purchase_enabled": true,
-    "ssr_enabled": false
-  },
-  
-  "recommended_nodes": ["HongKong01", "Japan02"]
-}
-```
-
-### フィールド説明
-
-| フィールド | 説明 |
-|------------|------|
-| `config_version` | キャッシュ検証用の設定バージョン番号 |
-| `domains` | API ドメインリスト（優先順位順）、可用性を自動テスト |
-| `backup_subscription` | バックアップ用サブスクリプション URL |
-| `announcement` | お知らせ設定、`type` は `info`/`warning`/`error` が可能 |
-| `maintenance` | メンテナンスモード、有効時はユーザー操作をブロック |
-| `update` | バージョン更新情報、`force: true` で強制更新 |
-| `min_version` | 最低サポートバージョン、これより古いバージョンは強制更新 |
-| `contact` | カスタマーサポートリンク |
-| `features` | 機能トグル |
-| `recommended_nodes` | 推奨ノード名リスト |
 
 ---
 
@@ -171,7 +127,7 @@ Future<String> getBaseUrl() async {
 ### 4. アプリアイコンの置き換え
 
 1. **1024x1024** の PNG 画像を準備
-2. `../assets/images/app_icon.png` に配置
+2. `assets/images/app_icon.png` に配置
 3. 実行：
    ```bash
    flutter pub run flutter_launcher_icons
@@ -200,7 +156,7 @@ flutter build linux
 
 ## ☕ プロジェクトを支援
 
-このプロジェクトが役立った場合は、著者にコーヒーを一杯奢って、オープンソース開発を支援してください！
+このプロジェクトが役立った場合は、著者にコーヒーを一杯奢ってください！
 
 | USDT (TRC20) | USDC (Arbitrum) | ETH (Arbitrum) | USDT (ERC20) |
 | :---: | :---: | :---: | :---: |
@@ -216,7 +172,7 @@ flutter build linux
 -   [Hysteria](https://github.com/apernet/hysteria): 強力な検閲回避プロトコル
 
 ### パネル & 管理
--   [V2Board](https://github.com/wyx2685/v2board): 強力な V2Ray パネル
+-   [V2Board](https://github.com/v2board/v2board): 強力な V2Ray パネル
 
 ---
 
@@ -226,4 +182,8 @@ flutter build linux
 
 ---
 
+<div align="center">
+
 **Flux Open Source** - Make Connection Simple.
+
+</div>

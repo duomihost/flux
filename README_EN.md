@@ -1,21 +1,52 @@
-English | [简体中文](README.md) | [繁體中文](docs/README_TW.md) | [日本語](docs/README_JA.md) | [한국어](docs/README_KO.md) | [Русский](docs/README_RU.md) | [हिन्दी](docs/README_HI.md) | [Español](docs/README_ES.md) | [Português](docs/README_PT.md) | [Français](docs/README_FR.md) | [Deutsch](docs/README_DE.md) | [العربية](docs/README_AR.md) | [Türkçe](docs/README_TR.md) | [Tiếng Việt](docs/README_VI.md) | [ไทย](docs/README_TH.md) | [Indonesia](docs/README_ID.md)
+[English](README_EN.md) | [简体中文](README.md) | [繁體中文](docs/README_TW.md) | [日本語](docs/README_JA.md) | [한국어](docs/README_KO.md) | [Русский](docs/README_RU.md) | [हिन्दी](docs/README_HI.md) | [Español](docs/README_ES.md) | [Português](docs/README_PT.md) | [Français](docs/README_FR.md) | [Deutsch](docs/README_DE.md) | [العربية](docs/README_AR.md) | [Türkçe](docs/README_TR.md) | [Tiếng Việt](docs/README_VI.md) | [ไทย](docs/README_TH.md) | [Indonesia](docs/README_ID.md)
 
-# Flux - Open Source V2Board Client
+<div align="center">
 
-**Flux** is a cross-platform client perfectly designed for [V2Board](https://github.com/wyx2685/v2board).
+# ⚡ Flux
 
-We are committed to providing the simplest and smoothest integration experience. If you are running a V2Board panel, Flux is your best choice for a client app.
+**🚀 The Modern Open-Source V2Board Client Built with Flutter**
+
+*One-Line Setup · 5 Platforms · 16 Languages · Beautiful UI*
+
+[![Stars](https://img.shields.io/github/stars/flux-apphub/flux?style=flat-square&logo=github)](https://github.com/flux-apphub/flux/stargazers)
+[![Forks](https://img.shields.io/github/forks/flux-apphub/flux?style=flat-square&logo=github)](https://github.com/flux-apphub/flux/network/members)
+[![License](https://img.shields.io/github/license/flux-apphub/flux?style=flat-square)](LICENSE)
+[![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=flat-square&logo=flutter)](https://flutter.dev)
+[![Platform](https://img.shields.io/badge/-Android%20%7C%20iOS%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-333?style=flat-square)](#)
 
 ---
 
-## 📞 Customization & Commercial Support
+**Flux** is the ultimate cross-platform client for [V2Board](https://github.com/v2board/v2board).  
+Deploy your branded VPN app in minutes — just change **one line of code**.
 
-If you need:
--   🔥 **Modify App name and Logo**
--   🎨 **Custom UI themes**
--   🚀 **Add advanced features**
+</div>
 
-Contact me on Telegram: 👉 **[@xiaoxiaonihaoya](https://t.me/xiaoxiaonihaoya)**
+---
+
+## ✨ Key Features
+
+| Feature | Description |
+|:---:|:---|
+| ⚡ **Instant Setup** | Just modify one API URL, no backend development required |
+| 🎨 **Beautiful UI** | Material Design 3 with dark/light theme support |
+| 📱 **Cross-Platform** | Built with Flutter for Android / iOS / Windows / macOS / Linux |
+| 🔐 **Multi-Protocol** | Hysteria2 / VLESS Reality / VMess / Trojan / Shadowsocks / WireGuard / TUIC |
+| 🌍 **Localization** | 16 languages covering global markets |
+| 🔓 **Fully Open Source** | MIT License, transparent and customizable |
+
+---
+
+## 🆚 Why Flux?
+
+| | Flux | Other Clients |
+|:---:|:---:|:---:|
+| **Setup Difficulty** | 🟢 One line change | 🔴 Backend required |
+| **Platform Support** | 🟢 5 platforms unified | 🟡 Usually 1-2 |
+| **UI Design** | 🟢 Modern Material 3 | 🟡 Function-first |
+| **Protocol Coverage** | 🟢 7+ protocols | 🟡 Limited |
+| **Languages** | 🟢 16 languages | 🟡 EN/CN only |
+| **Open Source** | 🟢 100% open | 🔴 Closed/partial |
+| **Branding** | 🟢 Easy rebrand | 🔴 Source modification |
 
 ---
 
@@ -32,18 +63,19 @@ Contact me on Telegram: 👉 **[@xiaoxiaonihaoya](https://t.me/xiaoxiaonihaoya)*
 
 | | |
 | :---: | :---: |
-| <img src="assets/images/screenshots/6.png" width="200"> | <img src="assets/images/screenshots/7.png" width="200"> |
-| <img src="assets/images/screenshots/8.png" width="200"> | <img src="assets/images/screenshots/9.png" width="200"> |
+| <img src="assets/images/screenshots/6.png" width="400"> | <img src="assets/images/screenshots/7.png" width="400"> |
+| <img src="assets/images/screenshots/8.png" width="400"> | <img src="assets/images/screenshots/9.png" width="400"> |
 
 ---
 
-## 🎉 Key Features
+## 📞 Customization & Commercial Support
 
--   **Simple Integration**: Just **one step**! Modify the API URL and you're ready to go.
--   **Multiple Protocols**: Supports VLESS, VMess, Trojan, Shadowsocks, WireGuard, TUIC, Hysteria2.
--   **Cross-Platform**: Android, iOS, Windows, macOS, Linux.
--   **Open Source**: Fully open source, secure and customizable.
--   **Multi-language Support**: Supports English, Chinese, Japanese, Korean, Russian, Spanish, and more.
+If you need:
+-   🔥 **Modify App name and Logo**
+-   🎨 **Custom UI themes**
+-   🚀 **Add advanced features**
+
+Contact on Telegram: 👉 **[@fluxdeveloper](https://t.me/fluxdeveloper)**
 
 ---
 
@@ -84,8 +116,6 @@ Flux uses native system-level solutions on each platform:
 - **VMess** (TCP / WebSocket)
 - **Trojan**
 - **Shadowsocks** (AEAD)
-- **WireGuard**
-- **TUIC**
 
 ⚠️ **Note**: Developer has no Apple devices, **iOS and macOS builds are not fully tested**. Community contributions welcome!
 
@@ -200,7 +230,7 @@ Future<String> getBaseUrl() async {
 Replace `com.example.yourapp` with your own App ID (e.g., `com.yourname.project`):
 
 | Platform | File Path | Field to Modify |
-|----------|-----------|-----------------|
+|----------|-----------|-----------------| 
 | **Android** | `android/app/build.gradle.kts` | `applicationId` and `namespace` |
 | **Android** | `android/app/src/main/AndroidManifest.xml` | Check package declaration |
 | **iOS** | `ios/Runner.xcodeproj/project.pbxproj` | `PRODUCT_BUNDLE_IDENTIFIER` (search and replace all) |
@@ -215,7 +245,7 @@ Replace `com.example.yourapp` with your own App ID (e.g., `com.yourname.project`
 ### 4. Modify App Name
 
 | Platform | File Path | Field to Modify |
-|----------|-----------|-----------------|
+|----------|-----------|-----------------| 
 | **Android** | `android/app/src/main/AndroidManifest.xml` | `android:label="YourAppName"` |
 | **iOS** | `ios/Runner/Info.plist` | `CFBundleDisplayName` |
 | **macOS** | `macos/Runner/Configs/AppInfo.xcconfig` | `PRODUCT_NAME` |
@@ -350,7 +380,7 @@ If this project helps you, consider buying the author a coffee!
 -   [Hysteria](https://github.com/apernet/hysteria): Powerful anti-censorship proxy protocol.
 
 ### Panels & Management
--   [V2Board](https://github.com/wyx2685/v2board): Powerful V2Ray panel.
+-   [V2Board](https://github.com/v2board/v2board): Powerful V2Ray panel.
 
 ### Tools & Libraries
 -   [hev-socks5-tunnel](https://github.com/heiher/hev-socks5-tunnel): High-performance SOCKS5 tunnel.
@@ -364,4 +394,16 @@ If this project helps you, consider buying the author a coffee!
 
 ---
 
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
 **Flux Open Source** - Make Connection Simple.
+
+*Keywords: V2Board client, Flutter VPN app, V2Ray Xray client, cross-platform proxy, Hysteria2 VLESS VMess Shadowsocks Trojan*
+
+</div>
