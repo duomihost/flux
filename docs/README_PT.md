@@ -14,6 +14,8 @@
 [![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=flat-square&logo=flutter)](https://flutter.dev)
 [![Platform](https://img.shields.io/badge/-Android%20%7C%20iOS%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-333?style=flat-square)](#)
 
+💬 **Junte-se à comunidade**: [Grupo do Telegram](https://t.me/+62Otr015kSs1YmNk) · 📞 **Negócios**: [@fluxdeveloper](https://t.me/fluxdeveloper)
+
 ---
 
 **Flux** é o cliente moderno projetado para [V2Board](https://github.com/v2board/v2board).  

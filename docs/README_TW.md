@@ -14,6 +14,8 @@
 [![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=flat-square&logo=flutter)](https://flutter.dev)
 [![Platform](https://img.shields.io/badge/-Android%20%7C%20iOS%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-333?style=flat-square)](#)
 
+💬 **加入社群**: [Telegram 群組](https://t.me/+62Otr015kSs1YmNk) · 📞 **商務合作**: [@fluxdeveloper](https://t.me/fluxdeveloper)
+
 ---
 
 **Flux** 是專為 [V2Board](https://github.com/v2board/v2board) 設計的現代化客戶端。  

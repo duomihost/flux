@@ -14,6 +14,8 @@
 [![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=flat-square&logo=flutter)](https://flutter.dev)
 [![Platform](https://img.shields.io/badge/-Android%20%7C%20iOS%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-333?style=flat-square)](#)
 
+💬 **커뮤니티 참여**: [텔레그램 그룹](https://t.me/+62Otr015kSs1YmNk) · 📞 **비즈니스**: [@fluxdeveloper](https://t.me/fluxdeveloper)
+
 ---
 
 **Flux**는 [V2Board](https://github.com/v2board/v2board)를 위해 설계된 현대적인 클라이언트입니다.  
