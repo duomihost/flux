@@ -45,7 +45,7 @@ on:
         default: ''
 
 env:
-  FLUTTER_VERSION: '3.24.5'
+  FLUTTER_VERSION: '3.35.4'  # 包含 Dart SDK 3.9.2，满足依赖要求
 
 jobs:
   build:
@@ -73,7 +73,7 @@ jobs:
       - name: 📦 Install dependencies
         run: |
           flutter pub get
-          flutter pub upgrade
+          # 不使用 flutter pub upgrade，避免依赖版本冲突
 
       - name: 🎨 Download and prepare logo (if provided)
         id: prepare_logo
@@ -196,9 +196,10 @@ jobs:
           # 备份原文件并替换
           if [ -f "lib/services/api_config.dart" ]; then
             cp lib/services/api_config.dart lib/services/api_config.dart.backup
-            mv lib/services/api_config_build.dart lib/services/api_config.dart
-            echo "✅ Updated API config"
           fi
+          # 无论原文件是否存在，都替换为新配置
+          mv lib/services/api_config_build.dart lib/services/api_config.dart
+          echo "✅ Updated API config"
           
           # 4. 确保二进制文件有执行权限
           chmod +x assets/bin/macos/* || true
