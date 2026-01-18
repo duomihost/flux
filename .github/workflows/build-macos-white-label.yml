@@ -1,0 +1,299 @@
+name: Build macOS White-Label App
+
+on:
+  workflow_dispatch:
+    inputs:
+      app_name:
+        description: '应用名称 (App Name)'
+        required: true
+        type: string
+        default: 'Flux'
+      bundle_id:
+        description: 'Bundle Identifier (如: com.example.app)'
+        required: true
+        type: string
+        default: 'com.example.yourapp'
+      api_url:
+        description: 'API 地址 (如: https://api.example.com/api/v1)'
+        required: true
+        type: string
+        default: 'https://api.example.com/api/v1'
+      logo_url:
+        description: 'Logo 图片 URL (可选，留空使用默认)'
+        required: false
+        type: string
+        default: ''
+      build_number:
+        description: '构建编号 (Build Number)'
+        required: false
+        type: string
+        default: '1'
+      version_name:
+        description: '版本号 (Version Name, 如: 1.0.0)'
+        required: false
+        type: string
+        default: '1.0.0'
+      upload_artifact:
+        description: '是否上传构建产物'
+        required: false
+        type: boolean
+        default: true
+      artifact_name:
+        description: '构建产物名称 (不含扩展名)'
+        required: false
+        type: string
+        default: ''
+
+env:
+  FLUTTER_VERSION: '3.24.5'
+
+jobs:
+  build:
+    name: Build macOS App
+    runs-on: macos-14  # 使用 macOS 14 (Sonoma) Runner
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🎯 Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: 'stable'
+          cache: true
+
+      - name: 🔍 Verify Flutter setup
+        run: |
+          flutter --version
+          flutter doctor -v
+
+      - name: 📦 Install dependencies
+        run: |
+          flutter pub get
+          flutter pub upgrade
+
+      - name: 🎨 Download and prepare logo (if provided)
+        id: prepare_logo
+        if: ${{ inputs.logo_url != '' }}
+        run: |
+          echo "Downloading logo from ${{ inputs.logo_url }}"
+          mkdir -p assets/images
+          curl -L -o assets/images/app_icon.png "${{ inputs.logo_url }}" || echo "Logo download failed, using default"
+          echo "logo_prepared=true" >> $GITHUB_OUTPUT
+
+      - name: 🔧 Configure app parameters
+        run: |
+          echo "📝 Configuring app parameters..."
+          
+          # 设置变量
+          APP_NAME="${{ inputs.app_name }}"
+          BUNDLE_ID="${{ inputs.bundle_id }}"
+          API_URL="${{ inputs.api_url }}"
+          VERSION_NAME="${{ inputs.version_name }}"
+          BUILD_NUMBER="${{ inputs.build_number }}"
+          
+          echo "App Name: $APP_NAME"
+          echo "Bundle ID: $BUNDLE_ID"
+          echo "API URL: $API_URL"
+          echo "Version: $VERSION_NAME+$BUILD_NUMBER"
+          
+          # 1. 修改 macOS AppInfo.xcconfig
+          if [ -f "macos/Runner/Configs/AppInfo.xcconfig" ]; then
+            sed -i '' "s/PRODUCT_NAME = .*/PRODUCT_NAME = $APP_NAME/" macos/Runner/Configs/AppInfo.xcconfig
+            sed -i '' "s/PRODUCT_BUNDLE_IDENTIFIER = .*/PRODUCT_BUNDLE_IDENTIFIER = $BUNDLE_ID/" macos/Runner/Configs/AppInfo.xcconfig
+            echo "✅ Updated AppInfo.xcconfig"
+          fi
+          
+          # 2. 修改 pubspec.yaml 版本信息
+          if [ -f "pubspec.yaml" ]; then
+            sed -i '' "s/^version: .*/version: $VERSION_NAME+$BUILD_NUMBER/" pubspec.yaml
+            sed -i '' "s/^name: .*/name: ${APP_NAME,,}/" pubspec.yaml || true
+            echo "✅ Updated pubspec.yaml"
+          fi
+          
+          # 3. 修改 API 配置（通过环境变量或构建时注入）
+          # 创建临时 API 配置文件
+          mkdir -p lib/services
+          cat > lib/services/api_config_build.dart << EOF
+          import 'package:shared_preferences/shared_preferences.dart';
+          import 'remote_config_service.dart';
+
+          class ApiConfig {
+            static const _tokenKey = 'api_token';
+            static const _authDataKey = 'api_auth_data';
+            static const String _defaultApiUrl = '$API_URL';
+
+            static String? _tokenCache;
+            static String? _authDataCache;
+
+            final RemoteConfigService _remoteConfig = RemoteConfigService();
+
+            Future<String> getBaseUrl() async {
+              try {
+                return await _remoteConfig.getActiveDomain();
+              } catch (e) {
+                return _defaultApiUrl;
+              }
+            }
+
+            Future<String?> getToken() async {
+              final cached = _tokenCache;
+              if (cached != null) return cached;
+              final prefs = await SharedPreferences.getInstance();
+              final value = prefs.getString(_tokenKey);
+              _tokenCache = value;
+              return value;
+            }
+
+            Future<void> setToken(String? token) async {
+              _tokenCache = token;
+              final prefs = await SharedPreferences.getInstance();
+              if (token == null || token.isEmpty) {
+                await prefs.remove(_tokenKey);
+                return;
+              }
+              await prefs.setString(_tokenKey, token);
+            }
+
+            Future<String?> getAuthData() async {
+              final cached = _authDataCache;
+              if (cached != null) return cached;
+              final prefs = await SharedPreferences.getInstance();
+              final value = prefs.getString(_authDataKey);
+              _authDataCache = value;
+              return value;
+            }
+
+            Future<void> setAuthData(String? value) async {
+              _authDataCache = value;
+              final prefs = await SharedPreferences.getInstance();
+              if (value == null || value.isEmpty) {
+                await prefs.remove(_authDataKey);
+                return;
+              }
+              await prefs.setString(_authDataKey, value);
+            }
+
+            Future<void> clearAuth() async {
+              _tokenCache = null;
+              _authDataCache = null;
+              final prefs = await SharedPreferences.getInstance();
+              await prefs.remove(_tokenKey);
+              await prefs.remove(_authDataKey);
+            }
+
+            Future<void> refreshAuthCache() async {
+              final prefs = await SharedPreferences.getInstance();
+              _tokenCache = prefs.getString(_tokenKey);
+              _authDataCache = prefs.getString(_authDataKey);
+            }
+          }
+          EOF
+          
+          # 备份原文件并替换
+          if [ -f "lib/services/api_config.dart" ]; then
+            cp lib/services/api_config.dart lib/services/api_config.dart.backup
+            mv lib/services/api_config_build.dart lib/services/api_config.dart
+            echo "✅ Updated API config"
+          fi
+          
+          # 4. 确保二进制文件有执行权限
+          chmod +x assets/bin/macos/* || true
+          
+          echo "✅ Configuration completed"
+
+      - name: 🧹 Clean previous builds
+        run: |
+          flutter clean
+          rm -rf build/
+
+      - name: 🏗️ Build macOS app (Release)
+        run: |
+          echo "🚀 Building macOS app..."
+          flutter build macos --release --no-codesign
+          
+          # 验证构建产物
+          if [ -d "build/macos/Build/Products/Release" ]; then
+            APP_PATH="build/macos/Build/Products/Release/$APP_NAME.app"
+            if [ -d "$APP_PATH" ]; then
+              echo "✅ Build successful: $APP_PATH"
+              du -sh "$APP_PATH"
+            else
+              echo "❌ App bundle not found at expected path"
+              ls -la build/macos/Build/Products/Release/
+              exit 1
+            fi
+          else
+            echo "❌ Build directory not found"
+            exit 1
+          fi
+
+      - name: 📦 Create DMG package (optional)
+        id: create_dmg
+        continue-on-error: true
+        run: |
+          APP_NAME="${{ inputs.app_name }}"
+          APP_PATH="build/macos/Build/Products/Release/$APP_NAME.app"
+          
+          if [ -d "$APP_PATH" ]; then
+            echo "📦 Creating DMG package..."
+            
+            # 安装 create-dmg (如果可用)
+            if ! command -v create-dmg &> /dev/null; then
+              echo "⚠️ create-dmg not available, skipping DMG creation"
+              echo "dmg_created=false" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+            
+            DMG_NAME="${APP_NAME// /_}-macOS-${{ inputs.version_name }}-${{ inputs.build_number }}.dmg"
+            create-dmg \
+              --volname "$APP_NAME" \
+              --window-pos 200 120 \
+              --window-size 800 400 \
+              --icon-size 100 \
+              --icon "$APP_NAME.app" 200 190 \
+              --hide-extension "$APP_NAME.app" \
+              --app-drop-link 600 185 \
+              "$DMG_NAME" \
+              "$APP_PATH" || true
+            
+            if [ -f "$DMG_NAME" ]; then
+              echo "✅ DMG created: $DMG_NAME"
+              echo "dmg_path=$DMG_NAME" >> $GITHUB_OUTPUT
+              echo "dmg_created=true" >> $GITHUB_OUTPUT
+            else
+              echo "dmg_created=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "dmg_created=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 📤 Upload build artifacts
+        if: ${{ inputs.upload_artifact == true }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.artifact_name != '' && inputs.artifact_name || format('{0}-macOS-{1}-{2}', inputs.app_name, inputs.version_name, inputs.build_number) }}
+          path: |
+            build/macos/Build/Products/Release/${{ inputs.app_name }}.app
+            ${{ steps.create_dmg.outputs.dmg_path }}
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: 📊 Build summary
+        run: |
+          echo "## 🎉 Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| 项目 | 值 |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|-----|" >> $GITHUB_STEP_SUMMARY
+          echo "| 应用名称 | ${{ inputs.app_name }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Bundle ID | ${{ inputs.bundle_id }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| API 地址 | ${{ inputs.api_url }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 版本号 | ${{ inputs.version_name }}+${{ inputs.build_number }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 构建产物 | ✅ 已上传 |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📥 下载构建产物" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "构建产物已上传到 GitHub Actions Artifacts，可在 Actions 页面下载。" >> $GITHUB_STEP_SUMMARY
