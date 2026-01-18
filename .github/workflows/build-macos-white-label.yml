@@ -114,8 +114,19 @@ jobs:
           flutter clean
           rm -rf build/
 
+      - name: 🔧 Inject API URL (build-time patch)
+        run: |
+          echo "🔧 Injecting API URL: ${{ inputs.api_url }}"
+          # 替换 api_config.dart 中的占位符
+          sed -i '' "s|YOUR_API_URL_HERE|${{ inputs.api_url }}|g" lib/services/api_config.dart
+          # 替换 remote_config_service.dart 中的占位符
+          sed -i '' "s|YOUR_API_URL_HERE|${{ inputs.api_url }}|g" lib/services/remote_config_service.dart
+          echo "✅ API URL injected successfully"
+
       - name: 🏗️ Build macOS app (Release)
         run: |
+          echo "🚀 Building macOS app"
+
           flutter build macos --release
 
           APP_PATH="build/macos/Build/Products/Release/${{ inputs.app_name }}.app"
