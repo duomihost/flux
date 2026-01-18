@@ -116,7 +116,7 @@ jobs:
 
       - name: 🏗️ Build macOS app (Release)
         run: |
-          flutter build macos --release --no-codesign
+          flutter build macos --release
 
           APP_PATH="build/macos/Build/Products/Release/${{ inputs.app_name }}.app"
           if [ ! -d "$APP_PATH" ]; then
